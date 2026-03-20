@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Schneiderei am See - MaÃŸgeschneiderte Kleidung</title>
-    <meta name="description" content="Professionelle Schneiderei am See. MaÃŸanfertigungen, Ã„nderungen, Reparaturen. QualitÃ¤t seit 1985.">
-    
-    <!-- PWA Support -->
+    <title>Schneiderei am See â€“ Massgeschneiderte Kleidung in Thalwil</title>
+    <meta name="description" content="Professionelle Schneiderei am See in Thalwil. Massanfertigungen, Aenderungen und Reparaturen. Qualitaet und handwerkliches Koennen seit ueber 35 Jahren.">
+    <meta name="keywords" content="Schneiderei, Thalwil, Zuerichsee, Massanfertigung, Aenderungsschneiderei, Brautkleid, Anzug, Kostuem">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#2c5f7c">
     <link rel="apple-touch-icon" href="icon-192x192.png">
@@ -21,18 +20,20 @@
         :root {
             --primary: #2c5f7c;
             --primary-dark: #1e4052;
-            --secondary: #e8b89d;
-            --accent: #d4756f;
+            --secondary: #c9a87c;
+            --accent: #8b6914;
             --light: #f8f9fa;
             --dark: #2d3436;
             --text: #636e72;
+            --white: #ffffff;
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             color: var(--text);
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
         
         /* Navigation */
@@ -40,11 +41,12 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255,255,255,0.95);
+            background: rgba(255,255,255,0.97);
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-            transition: all 0.3s;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
         }
         
         .nav-container {
@@ -57,7 +59,7 @@
         }
         
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 700;
             color: var(--primary);
             text-decoration: none;
@@ -67,20 +69,20 @@
         }
         
         .logo-icon {
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
             background: var(--primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
         
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
             list-style: none;
         }
         
@@ -88,11 +90,28 @@
             text-decoration: none;
             color: var(--dark);
             font-weight: 500;
-            transition: color 0.3s;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            position: relative;
         }
         
         .nav-links a:hover {
             color: var(--primary);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
         }
         
         /* Mobile Menu */
@@ -103,6 +122,7 @@
             font-size: 1.5rem;
             cursor: pointer;
             color: var(--primary);
+            padding: 0.5rem;
         }
         
         /* Hero Section */
@@ -113,7 +133,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 6rem 1.5rem 3rem;
+            padding: 7rem 1.5rem 4rem;
             position: relative;
             overflow: hidden;
         }
@@ -125,8 +145,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            opacity: 0.3;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.4;
         }
         
         .hero-content {
@@ -135,25 +155,40 @@
             max-width: 800px;
         }
         
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            color: rgba(255,255,255,0.9);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
         .hero h1 {
-            font-size: clamp(2rem, 5vw, 4rem);
+            font-size: clamp(2.2rem, 5vw, 4rem);
             color: white;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             font-weight: 700;
             line-height: 1.2;
+            letter-spacing: -1px;
         }
         
         .hero h1 span {
             color: var(--secondary);
+            display: block;
         }
         
         .hero p {
-            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-            color: rgba(255,255,255,0.9);
-            margin-bottom: 2rem;
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 2.5rem;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.7;
         }
         
         .btn {
@@ -164,20 +199,21 @@
             text-decoration: none;
             border-radius: 50px;
             font-weight: 600;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
             border: none;
             cursor: pointer;
             font-size: 1rem;
+            letter-spacing: 0.5px;
         }
         
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(232, 184, 157, 0.4);
+            box-shadow: 0 10px 30px rgba(201, 168, 124, 0.4);
         }
         
         .btn-outline {
             background: transparent;
-            border: 2px solid white;
+            border: 2px solid rgba(255,255,255,0.5);
             color: white;
             margin-left: 1rem;
         }
@@ -185,11 +221,12 @@
         .btn-outline:hover {
             background: white;
             color: var(--primary);
+            border-color: white;
         }
         
         /* Services Section */
         .services {
-            padding: 5rem 1.5rem;
+            padding: 6rem 1.5rem;
             background: var(--light);
         }
         
@@ -200,74 +237,81 @@
         
         .section-header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
         
         .section-header h2 {
             font-size: clamp(2rem, 4vw, 3rem);
             color: var(--primary);
             margin-bottom: 1rem;
+            font-weight: 700;
         }
         
         .section-header p {
             color: var(--text);
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.7;
         }
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
         }
         
         .service-card {
             background: white;
-            padding: 2.5rem 2rem;
-            border-radius: 20px;
+            padding: 3rem 2rem;
+            border-radius: 16px;
             text-align: center;
-            transition: all 0.3s;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.04);
         }
         
         .service-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
         
         .service-icon {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 1.5rem;
-            font-size: 2rem;
+            font-size: 1.8rem;
+            box-shadow: 0 10px 30px rgba(44, 95, 124, 0.2);
         }
         
         .service-card h3 {
             color: var(--dark);
-            margin-bottom: 0.5rem;
-            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+            font-weight: 600;
         }
         
         .service-card p {
             color: var(--text);
             font-size: 0.95rem;
+            line-height: 1.6;
         }
         
         /* About Section */
         .about {
-            padding: 5rem 1.5rem;
+            padding: 6rem 1.5rem;
             background: white;
         }
         
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 5rem;
             align-items: center;
         }
         
@@ -275,58 +319,107 @@
             font-size: clamp(1.8rem, 3vw, 2.5rem);
             color: var(--primary);
             margin-bottom: 1.5rem;
+            font-weight: 700;
         }
         
         .about-text p {
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
             color: var(--text);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0,0,0,0.08);
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text);
+            margin-top: 0.25rem;
         }
         
         .about-image {
             position: relative;
-            border-radius: 20px;
+            border-radius: 16px;
             overflow: hidden;
             aspect-ratio: 4/3;
-            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-size: 5rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
         }
         
         /* Gallery */
         .gallery {
-            padding: 5rem 1.5rem;
+            padding: 6rem 1.5rem;
             background: var(--light);
         }
         
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
         }
         
         .gallery-item {
-            aspect-ratio: 1;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: 15px;
+            aspect-ratio: 4/3;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-size: 3rem;
-            transition: transform 0.3s;
+            transition: all 0.4s ease;
             cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, transparent 0%, rgba(0,0,0,0.3) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
         
         .gallery-item:hover {
-            transform: scale(1.05);
+            transform: scale(1.03);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        
+        .gallery-item:hover::before {
+            opacity: 1;
         }
         
         /* Contact Section */
         .contact {
-            padding: 5rem 1.5rem;
+            padding: 6rem 1.5rem;
             background: var(--primary);
             color: white;
         }
@@ -338,37 +431,62 @@
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 4rem;
         }
         
         .contact-info h3 {
             color: var(--secondary);
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
         }
         
         .contact-item {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 1rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
         
         .contact-item-icon {
-            width: 50px;
-            height: 50px;
+            width: 48px;
+            height: 48px;
             background: rgba(255,255,255,0.1);
-            border-radius: 50%;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-item div strong {
+            display: block;
+            margin-bottom: 0.25rem;
+            color: white;
+        }
+        
+        .contact-item div {
+            color: rgba(255,255,255,0.85);
+            line-height: 1.6;
+        }
+        
+        .contact-item a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-item a:hover {
+            color: var(--secondary);
         }
         
         .contact-form {
-            background: rgba(255,255,255,0.1);
-            padding: 2rem;
-            border-radius: 20px;
+            background: rgba(255,255,255,0.08);
+            padding: 2.5rem;
+            border-radius: 16px;
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
         }
         
         .form-group {
@@ -379,16 +497,26 @@
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 500;
+            color: rgba(255,255,255,0.9);
+            font-size: 0.95rem;
         }
         
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 1rem;
-            border: none;
+            padding: 1rem 1.25rem;
+            border: 2px solid rgba(255,255,255,0.15);
             border-radius: 10px;
             font-size: 1rem;
-            background: rgba(255,255,255,0.9);
+            background: rgba(255,255,255,0.95);
+            color: var(--dark);
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
         }
         
         .form-group textarea {
@@ -398,7 +526,7 @@
         
         .btn-submit {
             width: 100%;
-            padding: 1rem;
+            padding: 1.1rem;
             background: var(--secondary);
             color: var(--primary-dark);
             border: none;
@@ -406,12 +534,13 @@
             font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
         }
         
         .btn-submit:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 8px 25px rgba(201, 168, 124, 0.4);
         }
         
         /* Footer */
@@ -419,7 +548,18 @@
             background: var(--primary-dark);
             color: white;
             text-align: center;
-            padding: 2rem 1.5rem;
+            padding: 2.5rem 1.5rem;
+        }
+        
+        footer p {
+            margin-bottom: 0.75rem;
+            opacity: 0.9;
+        }
+        
+        footer p:last-child {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-top: 1rem;
         }
         
         /* Mobile Styles */
@@ -437,22 +577,27 @@
                 flex-direction: column;
                 padding: 2rem;
                 gap: 1.5rem;
-                transform: translateX(-100%);
-                transition: transform 0.3s;
+                transform: translateY(-150%);
+                transition: transform 0.3s ease;
                 box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             }
             
             .nav-links.active {
-                transform: translateX(0);
+                transform: translateY(0);
             }
             
             .hero {
                 min-height: auto;
-                padding: 8rem 1.5rem 4rem;
+                padding: 8rem 1.5rem 5rem;
             }
             
             .hero h1 {
                 font-size: 2rem;
+            }
+            
+            .hero-badge {
+                font-size: 0.75rem;
+                padding: 0.4rem 1rem;
             }
             
             .btn-outline {
@@ -463,11 +608,25 @@
             .about-content,
             .contact-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 3rem;
+            }
+            
+            .about-stats {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+            }
+            
+            .stat-number {
+                font-size: 1.8rem;
             }
             
             .services-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .service-card {
+                padding: 2rem 1.5rem;
             }
             
             .gallery-grid {
@@ -475,7 +634,7 @@
             }
             
             .contact-form {
-                padding: 1.5rem;
+                padding: 1.75rem;
             }
         }
         
@@ -491,17 +650,14 @@
             transform: translateY(0);
         }
         
-        /* Tap highlight removal for mobile */
         * {
             -webkit-tap-highlight-color: transparent;
         }
         
-        /* Smooth scroll */
         html {
             scroll-behavior: smooth;
         }
         
-        /* Loading spinner */
         .spinner {
             display: inline-block;
             width: 20px;
@@ -518,7 +674,6 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="nav-container">
             <a href="#" class="logo">
@@ -528,77 +683,94 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Leistungen</a></li>
-                <li><a href="#about">Ãœber uns</a></li>
+                <li><a href="#about">Ueber uns</a></li>
                 <li><a href="#gallery">Galerie</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
-            <button class="menu-toggle" onclick="toggleMenu()">â˜°</button>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menue oeffnen">â˜°</button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>MaÃŸgeschneidert<br>mit <span>Leidenschaft</span></h1>
-            <p>Ihre professionelle Schneiderei am See. Seit 1985 fertigen wir hochwertige MaÃŸanfertigungen, Ã„nderungen und Reparaturen mit Liebe zum Detail.</p>
+            <div class="hero-badge">Ueber 35 Jahre Erfahrung</div>
+            <h1>Massgeschneidert<br>mit <span>Leidenschaft</span></h1>
+            <p>Ihre professionelle Schneiderei am Zuerichsee. Seit 1989 fertigen wir hochwertige Massanfertigungen, fuehren Aenderungen durch und reparieren Ihre Lieblingsstuecke mit handwerklichem Koennen und Liebe zum Detail.</p>
             <div>
-                <a href="#contact" class="btn">Termin vereinbaren</a>
+                <a href="#contact" class="btn">Jetzt Termin vereinbaren</a>
                 <a href="#services" class="btn btn-outline">Unsere Leistungen</a>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
             <div class="section-header fade-in">
                 <h2>Unsere Leistungen</h2>
-                <p>Von der MaÃŸanfertigung bis zur Reparatur â€“ wir verwÃ¶hnen Sie und Ihre Kleidung mit hÃ¶chster QualitÃ¤t und handwerklichem KÃ¶nnen.</p>
+                <p>Von der Massanfertigung bis zur Reparatur â€“ wir verwÃ¶hnen Sie und Ihre Kleidung mit hoechster Qualitaet und jahrelanger Erfahrung im Schneiderhandwerk.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card fade-in">
                     <div class="service-icon">ðŸ“</div>
-                    <h3>MaÃŸanfertigungen</h3>
-                    <p>Individuell gefertigte Kleidung nach Ihren WÃ¼nschen. AnzÃ¼ge, Kleider, Blazer und mehr â€“ perfekt passend und einzigartig.</p>
+                    <h3>Massanfertigungen</h3>
+                    <p>Individuell gefertigte Kleidung nach Ihren Wuenschen. Anzuege, Kleider, Blazer und mehr â€“ perfekt passend und einzigartig in Qualitaet und Passform.</p>
                 </div>
+                
                 <div class="service-card fade-in">
                     <div class="service-icon">âœ‚ï¸</div>
-                    <h3>Ã„nderungen</h3>
-                    <p>KÃ¼rzen, enger nÃ¤hen, LÃ¤ngen anpassen. Wir sorgen dafÃ¼r, dass Ihre Kleidung perfekt sitzt und Sie sich wohlfÃ¼hlen.</p>
+                    <h3>Aenderungsschneiderei</h3>
+                    <p>Hosen kuerzen, enger oder weiter naehen, Laengen anpassen â€“ wir sorgen dafuer, dass Ihre Kleidung perfekt sitzt und Sie sich rundum wohlfuehlen.</p>
                 </div>
+                
                 <div class="service-card fade-in">
                     <div class="service-icon">ðŸ§µ</div>
                     <h3>Reparaturen</h3>
-                    <p>ReiÃŸverschlÃ¼sse, KnÃ¶pfe, LÃ¶cher und mehr. Wir reparieren Ihre LieblingsstÃ¼cke fachgerecht und nachhaltig.</p>
+                    <p>Reissverschluesse erneuern, Knoepfe annaehen, Loecher fachgerecht schliessen â€“ wir reparieren Ihre Lieblingsstuecke nachhaltig und mit Geschick.</p>
                 </div>
+                
                 <div class="service-card fade-in">
-                    <div class="service-icon">ðŸ‘—</div>
-                    <h3>Brautmoden</h3>
-                    <p>MaÃŸanfertigung und Ã„nderungen von Brautkleidern. FÃ¼r Ihren besonderen Tag â€“ perfekt sitzend und wunderschÃ¶n.</p>
+                    <div class="service-icon">â™¥</div>
+                    <h3>Brautmoden & Festtagskleider</h3>
+                    <p>Massanfertigung und Aenderungen von Brautkleidern sowie festlicher Kleidung. Fuer Ihren besonderen Tag â€“ perfekt sitzend und wunderschoen.</p>
                 </div>
+                
                 <div class="service-card fade-in">
                     <div class="service-icon">ðŸ‘”</div>
-                    <h3>Hemden-Service</h3>
-                    <p>MaÃŸgeschneiderte Business-Hemden nach Ihren Vorstellungen. Inklusive Monogramm-Stickerei auf Wunsch.</p>
+                    <h3>Business-Kleidung</h3>
+                    <p>Massgeschneiderte Business-Anzuege und Hemden nach Ihren Vorstellungen. Inklusive Monogramm-Stickerei auf Wunsch fuer den persoenlichen Touch.</p>
                 </div>
+                
                 <div class="service-card fade-in">
                     <div class="service-icon">ðŸŽ­</div>
-                    <h3>KostÃ¼me</h3>
-                    <p>FaschingskostÃ¼me, Theatergewandung, historische Kleidung. Wir bringen Ihre Ideen zum Leben.</p>
+                    <h3>Kostueme & Trachten</h3>
+                    <p>Faschingskostueme, Theatergewandung, historische Kleidung und Trachten. Wir bringen Ihre Ideen mit handwerklichem Geschick zum Leben.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
             <div class="about-content">
                 <div class="about-text fade-in">
                     <h2>Tradition trifft Moderne</h2>
-                    <p>Seit Ã¼ber 35 Jahren steht die Schneiderei am See fÃ¼r hÃ¶chste QualitÃ¤t und handwerkliches KÃ¶nnen. Was als kleine Werkstatt begann, hat sich zu einem der angesehensten Schneiderbetriebe der Region entwickelt.</p>
-                    <p>Unser Team aus erfahrenen Schneiderinnen und Schneidern vereint traditionelle Techniken mit modernen Designs. Jedes StÃ¼ck, das unser Haus verlÃ¤sst, ist ein Unikat â€“ gefertigt mit Liebe zum Detail und PrÃ¤zision.</p>
-                    <p>Wir legen groÃŸen Wert auf nachhaltige Materialien und faire Produktion. Ihre Kleidung soll nicht nur gut aussehen, sondern auch gut tun.</p>
+                    <p>Seit ueber 35 Jahren steht die Schneiderei am See fuer hoechste Qualitaet und handwerkliches Koennen. Was als kleine Werkstatt begann, hat sich zu einem der angesehensten Schneiderbetriebe am Zuerichsee entwickelt.</p>
+                    <p>Unser Team aus erfahrenen Schneiderinnen und Schneidern vereint traditionelle Techniken mit zeitgemaessen Designs. Jedes Stueck, das unser Haus verlaesst, ist ein Unikat â€“ gefertigt mit Liebe zum Detail und groesster Sorgfalt.</p>
+                    <p>Wir legen grossen Wert auf nachhaltige Materialien und regionale Lieferanten. Ihre Kleidung soll nicht nur gut aussehen, sondern auch umweltbewusst gefertigt sein.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">35+</span>
+                            <span class="stat-label">Jahre Erfahrung</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">10'000+</span>
+                            <span class="stat-label">Zufriedene Kunden</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Handarbeit</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="about-image fade-in">
                     ðŸ§µ
@@ -607,30 +779,28 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
     <section class="gallery" id="gallery">
         <div class="container">
             <div class="section-header fade-in">
                 <h2>Unsere Arbeiten</h2>
-                <p>Einblicke in unsere Werkstatt â€“ von der Idee bis zum fertigen KleidungsstÃ¼ck.</p>
+                <p>Einblicke in unsere Werkstatt â€“ von der ersten Idee bis zum fertigen Kleidungsstueck. Qualitaet, die man sieht und fuehlt.</p>
             </div>
             <div class="gallery-grid">
-                <div class="gallery-item fade-in">ðŸ‘”</div>
-                <div class="gallery-item fade-in">ðŸ‘—</div>
-                <div class="gallery-item fade-in">ðŸ§µ</div>
-                <div class="gallery-item fade-in">âœ‚ï¸</div>
-                <div class="gallery-item fade-in">ðŸ‘˜</div>
-                <div class="gallery-item fade-in">ðŸŽ€</div>
+                <div class="gallery-item fade-in"><span>ðŸ‘”</span></div>
+                <div class="gallery-item fade-in"><span>ðŸ‘—</span></div>
+                <div class="gallery-item fade-in"><span>ðŸ§µ</span></div>
+                <div class="gallery-item fade-in"><span>âœ‚ï¸</span></div>
+                <div class="gallery-item fade-in"><span>ðŸ‘˜</span></div>
+                <div class="gallery-item fade-in"><span>ðŸŽ€</span></div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-header fade-in">
                 <h2 style="color: white;">Kontaktieren Sie uns</h2>
-                <p style="color: rgba(255,255,255,0.9);">Vereinbaren Sie einen Termin oder stellen Sie uns Ihre Fragen. Wir freuen uns auf Sie!</p>
+                <p style="color: rgba(255,255,255,0.9);">Vereinbaren Sie einen Termin oder stellen Sie uns Ihre Fragen. Wir freuen uns darauf, Sie persoenlich zu beraten!</p>
             </div>
             <div class="contact-grid">
                 <div class="contact-info fade-in">
@@ -638,55 +808,57 @@
                     <div class="contact-item">
                         <div class="contact-item-icon">ðŸ“</div>
                         <div>
-                            <strong>Adresse</strong><br>
-                            SeestraÃŸe 123<br>
-                            8800 Thalwil
+                            <strong>Adresse</strong>
+                            Seestrasse 123<br>
+                            CH-8800 Thalwil<br>
+                            Direkt am Zuerichsee
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-item-icon">ðŸ“ž</div>
                         <div>
-                            <strong>Telefon</strong><br>
-                            <a href="tel:+41441234567" style="color: white;">044 123 45 67</a>
+                            <strong>Telefon</strong>
+                            <a href="tel:+41441234567">044 123 45 67</a>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-item-icon">ðŸ“§</div>
                         <div>
-                            <strong>E-Mail</strong><br>
-                            <a href="mailto:info@schneiderei-am-see.ch" style="color: white;">info@schneiderei-am-see.ch</a>
+                            <strong>E-Mail</strong>
+                            <a href="mailto:info@schneiderei-am-see.ch">info@schneiderei-am-see.ch</a>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-item-icon">ðŸ•’</div>
                         <div>
-                            <strong>Ã–ffnungszeiten</strong><br>
-                            Mo-Fr: 08:00 - 18:00<br>
-                            Sa: 09:00 - 14:00
+                            <strong>Oeffnungszeiten</strong>
+                            Moâ€“Fr: 08:00 â€“ 18:00 Uhr<br>
+                            Sa: 09:00 â€“ 14:00 Uhr<br>
+                            <em>Termine auch ausserhalb moeglich</em>
                         </div>
                     </div>
                 </div>
                 <div class="contact-form fade-in">
                     <form id="contactForm" onsubmit="handleSubmit(event)">
                         <div class="form-group">
-                            <label for="name">Ihr Name</label>
+                            <label for="name">Ihr Name *</label>
                             <input type="text" id="name" name="name" required placeholder="Max Mustermann">
                         </div>
                         <div class="form-group">
-                            <label for="email">E-Mail</label>
-                            <input type="email" id="email" name="email" required placeholder="max@beispiel.ch">
+                            <label for="email">E-Mail-Adresse *</label>
+                            <input type="email" id="email" name="email" required placeholder="max.mustermann@beispiel.ch">
                         </div>
                         <div class="form-group">
                             <label for="phone">Telefon (optional)</label>
                             <input type="tel" id="phone" name="phone" placeholder="044 123 45 67">
                         </div>
                         <div class="form-group">
-                            <label for="service">GewÃ¼nschte Leistung</label>
-                            <input type="text" id="service" name="service" placeholder="z.B. MaÃŸanfertigung Anzug">
+                            <label for="service">Gewuenschte Leistung</label>
+                            <input type="text" id="service" name="service" placeholder="z. B. Massanfertigung Anzug">
                         </div>
                         <div class="form-group">
-                            <label for="message">Nachricht</label>
-                            <textarea id="message" name="message" placeholder="Beschreiben Sie Ihr Anliegen..."></textarea>
+                            <label for="message">Ihre Nachricht *</label>
+                            <textarea id="message" name="message" required placeholder="Beschreiben Sie Ihr Anliegen... Wir melden uns umgehend bei Ihnen."></textarea>
                         </div>
                         <button type="submit" class="btn-submit">Nachricht senden</button>
                     </form>
@@ -695,10 +867,9 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Schneiderei am See. Alle Rechte vorbehalten.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Mit â¤ï¸ gefertigt am ZÃ¼richsee</p>
+        <p>&copy; 2024 Schneiderei am See â€“ Inh. [Name]. Alle Rechte vorbehalten.</p>
+        <p>Mit â¤ï¸ und handwerklichem Geschick gefertigt in Thalwil am Zuerichsee</p>
     </footer>
 
     <script>
@@ -739,13 +910,12 @@
             
             const btn = e.target.querySelector('.btn-submit');
             const originalText = btn.textContent;
-            btn.innerHTML = '<span class="spinner"></span> Senden...';
+            btn.innerHTML = '<span class="spinner"></span> Wird gesendet...';
             btn.disabled = true;
 
-            // Simulate sending
             setTimeout(() => {
-                btn.textContent = 'âœ“ Nachricht gesendet!';
-                btn.style.background = '#00ff88';
+                btn.textContent = 'âœ“ Nachricht erfolgreich gesendet!';
+                btn.style.background = '#00cc88';
                 
                 setTimeout(() => {
                     btn.textContent = originalText;
@@ -756,7 +926,7 @@
             }, 1500);
         }
 
-        // Smooth scroll for navigation
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -781,11 +951,9 @@
             } else {
                 nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
             }
-            
-            lastScroll = currentScroll;
         });
 
-        // Register Service Worker for PWA
+        // Register Service Worker
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('sw.js').catch(err => {
                 console.log('Service Worker registration failed');
