@@ -3,49 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schneiderei am See â€“ Handwerk am ZÃ¼richsee</title>
-    <meta name="description" content="Traditionelle Schneiderei in Thalwil. Massanfertigungen, Ã„nderungen, Reparaturen. Handwerk seit Ã¼ber 35 Jahren.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
-    
+    <title>Schneiderei am See - Handwerk am Zuerichsee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Source+Sans+Pro:wght@300;400;600&amp;display=swap" rel="stylesheet">
     <style>
         :root {
-            --color-cream: #F5F1E8;
-            --color-sand: #E8DFD0;
-            --color-taupe: #A69B8D;
-            --color-brown: #6B5B4F;
-            --color-charcoal: #3D3530;
-            --color-accent: #8B6914;
-            --color-white: #FFFFFF;
-            --font-serif: 'Cormorant Garamond', Georgia, serif;
-            --font-sans: 'Source Sans Pro', -apple-system, sans-serif;
+            --cream: #F5F1E8;
+            --sand: #E8DFD0;
+            --taupe: #A69B8D;
+            --brown: #6B5B4F;
+            --charcoal: #3D3530;
+            --accent: #8B6914;
         }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: var(--font-sans);
-            background-color: var(--color-cream);
-            color: var(--color-charcoal);
+            font-family: "Source Sans Pro", sans-serif;
+            background: var(--cream);
+            color: var(--charcoal);
             line-height: 1.7;
-            font-weight: 300;
         }
-        
-        /* Header */
         header {
-            background: var(--color-white);
+            background: white;
             padding: 1.5rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid var(--color-sand);
+            border-bottom: 1px solid var(--sand);
         }
-        
         .header-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -54,459 +37,95 @@
             justify-content: space-between;
             align-items: center;
         }
-        
         .logo {
-            font-family: var(--font-serif);
+            font-family: "Cormorant Garamond", serif;
             font-size: 1.8rem;
             font-weight: 600;
-            color: var(--color-charcoal);
+            color: var(--charcoal);
             text-decoration: none;
-            letter-spacing: 1px;
         }
-        
-        .logo span {
-            font-weight: 400;
-            font-style: italic;
-        }
-        
-        nav {
-            display: flex;
-            gap: 3rem;
-        }
-        
+        .logo span { font-weight: 400; font-style: italic; }
+        nav { display: flex; gap: 3rem; }
         nav a {
             text-decoration: none;
-            color: var(--color-brown);
-            font-size: 0.95rem;
-            font-weight: 400;
+            color: var(--brown);
+            font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            position: relative;
-            transition: color 0.3s;
         }
-        
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--color-accent);
-            transition: width 0.3s;
-        }
-        
-        nav a:hover {
-            color: var(--color-charcoal);
-        }
-        
-        nav a:hover::after {
-            width: 100%;
-        }
-        
-        /* Hero */
         .hero {
             min-height: 90vh;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            background: var(--color-white);
+            background: white;
         }
-        
         .hero-content {
             display: flex;
             flex-direction: column;
             justify-content: center;
             padding: 6rem;
-            background: var(--color-cream);
+            background: var(--cream);
         }
-        
         .hero-label {
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 3px;
-            color: var(--color-taupe);
+            color: var(--taupe);
             margin-bottom: 1.5rem;
         }
-        
         .hero h1 {
-            font-family: var(--font-serif);
+            font-family: "Cormorant Garamond", serif;
             font-size: clamp(2.5rem, 5vw, 4.5rem);
             font-weight: 500;
             line-height: 1.1;
-            color: var(--color-charcoal);
+            color: var(--charcoal);
             margin-bottom: 1.5rem;
         }
-        
         .hero h1 em {
             font-style: italic;
             font-weight: 400;
-            color: var(--color-accent);
+            color: var(--accent);
         }
-        
         .hero p {
             font-size: 1.15rem;
-            color: var(--color-brown);
+            color: var(--brown);
             max-width: 500px;
             margin-bottom: 2.5rem;
         }
-        
         .btn {
             display: inline-block;
             padding: 1rem 2.5rem;
-            background: var(--color-charcoal);
-            color: var(--color-white);
+            background: var(--charcoal);
+            color: white;
             text-decoration: none;
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             transition: all 0.3s;
-            border: none;
-            cursor: pointer;
         }
-        
-        .btn:hover {
-            background: var(--color-accent);
-        }
-        
+        .btn:hover { background: var(--accent); }
         .btn-outline {
             background: transparent;
-            color: var(--color-charcoal);
-            border: 1px solid var(--color-charcoal);
+            color: var(--charcoal);
+            border: 1px solid var(--charcoal);
             margin-left: 1rem;
         }
-        
         .btn-outline:hover {
-            background: var(--color-charcoal);
-            color: var(--color-white);
+            background: var(--charcoal);
+            color: white;
         }
-        
         .hero-image {
-            background: linear-gradient(135deg, var(--color-taupe) 0%, var(--color-brown) 100%);
+            background: linear-gradient(135deg, var(--taupe) 0%, var(--brown) 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 8rem;
         }
-        
-        /* Intro Section */
-        .intro {
-            padding: 8rem 2rem;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .intro h2 {
-            font-family: var(--font-serif);
-            font-size: 2.5rem;
-            font-weight: 500;
-            margin-bottom: 1.5rem;
-            color: var(--color-charcoal);
-        }
-        
-        .intro p {
-            font-size: 1.1rem;
-            color: var(--color-brown);
-        }
-        
-        .divider {
-            width: 60px;
-            height: 2px;
-            background: var(--color-accent);
-            margin: 2rem auto;
-        }
-        
-        /* Services */
-        .services {
-            background: var(--color-white);
-            padding: 6rem 2rem;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        
-        .section-header h2 {
-            font-family: var(--font-serif);
-            font-size: 2.5rem;
-            font-weight: 500;
-            color: var(--color-charcoal);
-        }
-        
-        .services-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-        }
-        
-        .service-card {
-            padding: 3rem;
-            border: 1px solid var(--color-sand);
-            transition: all 0.3s;
-            background: var(--color-white);
-        }
-        
-        .service-card:hover {
-            border-color: var(--color-taupe);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-        }
-        
-        .service-number {
-            font-family: var(--font-serif);
-            font-size: 3rem;
-            font-weight: 300;
-            color: var(--color-sand);
-            margin-bottom: 1rem;
-        }
-        
-        .service-card h3 {
-            font-family: var(--font-serif);
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--color-charcoal);
-        }
-        
-        .service-card p {
-            color: var(--color-brown);
-            font-size: 1rem;
-        }
-        
-        /* Philosophy */
-        .philosophy {
-            padding: 8rem 2rem;
-            background: var(--color-charcoal);
-            color: var(--color-cream);
-            text-align: center;
-        }
-        
-        .philosophy h2 {
-            font-family: var(--font-serif);
-            font-size: 2.5rem;
-            font-weight: 500;
-            margin-bottom: 2rem;
-        }
-        
-        .philosophy p {
-            max-width: 700px;
-            margin: 0 auto 3rem;
-            font-size: 1.2rem;
-            color: var(--color-sand);
-        }
-        
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 5rem;
-            margin-top: 4rem;
-        }
-        
-        .stat {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-family: var(--font-serif);
-            font-size: 4rem;
-            font-weight: 300;
-            color: var(--color-accent);
-            display: block;
-        }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--color-taupe);
-        }
-        
-        /* Gallery */
-        .gallery {
-            padding: 6rem 2rem;
-            background: var(--color-cream);
-        }
-        
-        .gallery-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-        
-        .gallery-item {
-            aspect-ratio: 4/3;
-            background: linear-gradient(135deg, var(--color-taupe), var(--color-brown));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            transition: transform 0.3s;
-            cursor: pointer;
-        }
-        
-        .gallery-item:hover {
-            transform: scale(1.02);
-        }
-        
-        .gallery-item.large {
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-        
-        /* Contact */
-        .contact {
-            padding: 8rem 2rem;
-            background: var(--color-white);
-        }
-        
-        .contact-grid {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6rem;
-        }
-        
-        .contact-info h2 {
-            font-family: var(--font-serif);
-            font-size: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .contact-item {
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid var(--color-sand);
-        }
-        
-        .contact-item:last-child {
-            border-bottom: none;
-        }
-        
-        .contact-item h3 {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--color-taupe);
-            margin-bottom: 0.5rem;
-        }
-        
-        .contact-item p, .contact-item a {
-            font-family: var(--font-serif);
-            font-size: 1.3rem;
-            color: var(--color-charcoal);
-            text-decoration: none;
-        }
-        
-        .contact-item a:hover {
-            color: var(--color-accent);
-        }
-        
-        .contact-form {
-            background: var(--color-cream);
-            padding: 3rem;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group label {
-            display: block;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--color-taupe);
-            margin-bottom: 0.5rem;
-        }
-        
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            border: 1px solid var(--color-sand);
-            background: var(--color-white);
-            font-family: var(--font-sans);
-            font-size: 1rem;
-            color: var(--color-charcoal);
-            transition: border-color 0.3s;
-        }
-        
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--color-accent);
-        }
-        
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--color-charcoal);
-            color: var(--color-sand);
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        
-        footer .logo {
-            color: var(--color-cream);
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-        
-        footer p {
-            font-size: 0.9rem;
-        }
-        
-        /* Mobile */
         @media (max-width: 768px) {
-            nav {
-                display: none;
-            }
-            
-            .hero {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero-content {
-                padding: 4rem 2rem;
-                order: 2;
-            }
-            
-            .hero-image {
-                min-height: 40vh;
-                order: 1;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .stats {
-                flex-direction: column;
-                gap: 2rem;
-            }
-            
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .gallery-item.large {
-                grid-column: span 1;
-                grid-row: span 1;
-            }
-            
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
+            nav { display: none; }
+            .hero { grid-template-columns: 1fr; }
+            .hero-content { padding: 4rem 2rem; order: 2; }
+            .hero-image { min-height: 40vh; order: 1; }
         }
     </style>
 </head>
@@ -515,151 +134,22 @@
         <div class="header-container">
             <a href="#" class="logo">Schneiderei <span>am See</span></a>
             <nav>
-                <a href="#services">Leistungen</a>
-                <a href="#philosophie">Philosophie</a>
-                <a href="#arbeiten">Arbeiten</a>
+                <a href="#leistungen">Leistungen</a>
                 <a href="#kontakt">Kontakt</a>
             </nav>
         </div>
     </header>
-    
     <section class="hero">
         <div class="hero-content">
             <div class="hero-label">Seit 1989 in Thalwil</div>
             <h1>Handwerk mit <em>Herz</em></h1>
-            <p>In unserer Werkstatt am ZÃ¼richsee verbinden wir traditionelles Schneiderhandwerk mit zeitgemÃ¤ssem Design. Jedes StÃ¼ck wird mit Liebe zum Detail gefertigt.</p>
+            <p>In unserer Werkstatt am Zuerichsee verbinden wir traditionelles Schneiderhandwerk mit zeitgemaessem Design.</p>
             <div>
                 <a href="#kontakt" class="btn">Termin vereinbaren</a>
-                <a href="#services" class="btn btn-outline">Unsere Leistungen</a>
+                <a href="#leistungen" class="btn btn-outline">Leistungen</a>
             </div>
         </div>
-        <div class="hero-image">
-            ðŸ§µ
-        </div>
+        <div class="hero-image">&#x1F9F5;</div>
     </section>
-    
-    <section class="intro">
-        <h2>MaÃŸarbeit in Perfektion</h2>
-        <div class="divider"></div>
-        <p>Ob Massanfertigung, Ã„nderung oder Reparatur â€“ wir behandeln jedes KleidungsstÃ¼ck mit dem Respekt, den es verdient. Denn gute Kleidung ist mehr als Stoff und Faden.</p>
-    </section>
-    
-    <section class="services" id="services">
-        <div class="section-header">
-            <h2>Unsere Leistungen</h2>
-            <div class="divider"></div>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-number">01</div>
-                <h3>Massanfertigungen</h3>
-                <p>Individuell gefertigte Kleidung nach Ihren Vorstellungen. Von eleganten AnzÃ¼gen bis zu festlichen Kleidern â€“ passgenau und einzigartig.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-number">02</div>
-                <h3>Ã„nderungen</h3>
-                <p>Hosen kÃ¼rzen, Jacken enger nÃ¤hen, RÃ¶cke kÃ¼rzen. Wir sorgen dafÃ¼r, dass Ihre Kleidung perfekt sitzt und Sie sich wohlfÃ¼hlen.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-number">03</div>
-                <h3>Reparaturen</h3>
-                <p>ReiÃŸverschlÃ¼sse, KnÃ¶pfe, kleine LÃ¶cher oder grÃ¶ÃŸere SchÃ¤den. Wir reparieren Ihre LieblingsstÃ¼cke fachgerecht und nachhaltig.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-number">04</div>
-                <h3>Brautmoden</h3>
-                <p>Ihr besonderer Tag verdient ein besonderes Kleid. Wir fertigen und Ã¤ndern Brautkleider und festliche Mode mit grÃ¶ÃŸter Sorgfalt.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-number">05</div>
-                <h3>Business-Mode</h3>
-                <p>MaÃŸgeschneiderte Business-AnzÃ¼ge und Hemden. Inklusive Monogramm-Stickerei auf Wunsch fÃ¼r den persÃ¶nlichen Touch.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-number">06</div>
-                <h3>KostÃ¼me & Trachten</h3>
-                <p>Ob FaschingskostÃ¼m, Theatergewandung oder traditionelle Tracht â€“ wir bringen Ihre Ideen zum Leben.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section class="philosophy" id="philosophie">
-        <h2>Unsere Philosophie</h2>
-        <p>QualitÃ¤t braucht Zeit. Deshalb nehmen wir uns fÃ¼r jeden Kunden und jedes Projekt die Zeit, die nÃ¶tig ist. Denn nur so entsteht Kleidung, die nicht nur passt, sondern auch Ã¼berzeugt.</p>
-        <div class="stats">
-            <div class="stat">
-                <span class="stat-number">35+</span>
-                <span class="stat-label">Jahre Erfahrung</span>
-            </div>
-            <div class="stat">
-                <span class="stat-number">10k+</span>
-                <span class="stat-label">Zufriedene Kunden</span>
-            </div>
-            <div class="stat">
-                <span class="stat-number">100%</span>
-                <span class="stat-label">Handarbeit</span>
-            </div>
-        </div>
-    </section>
-    
-    <section class="gallery" id="arbeiten">
-        <div class="section-header">
-            <h2>Unsere Arbeiten</h2>
-            <div class="divider"></div>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item large">ðŸ‘”</div>
-            <div class="gallery-item">ðŸ‘—</div>
-            <div class="gallery-item">ðŸ§µ</div>
-            <div class="gallery-item">âœ‚ï¸</div>
-            <div class="gallery-item">ðŸ‘˜</div>
-        </div>
-    </section>
-    
-    <section class="contact" id="kontakt">
-        <div class="contact-grid">
-            <div class="contact-info">
-                <h2>Kontakt</h2>
-                <div class="contact-item">
-                    <h3>Adresse</h3>
-                    <p>Schneiderei am See<br>Seestrasse 123<br>8800 Thalwil</p>
-                </div>
-                <div class="contact-item">
-                    <h3>Telefon</h3>
-                    <a href="tel:+41441234567">044 123 45 67</a>
-                </div>
-                <div class="contact-item">
-                    <h3>E-Mail</h3>
-                    <a href="mailto:info@schneiderei-am-see.ch">info@schneiderei-am-see.ch</a>
-                </div>
-                <div class="contact-item">
-                    <h3>Ã–ffnungszeiten</h3>
-                    <p>Moâ€“Fr: 08:00 â€“ 18:00 Uhr<br>Sa: 09:00 â€“ 14:00 Uhr</p>
-                </div>
-            </div>
-            <div class="contact-form">
-                <form>
-                    <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" placeholder="Ihr Name">
-                    </div>
-                    <div class="form-group">
-                        <label>E-Mail</label>
-                        <input type="email" placeholder="Ihre E-Mail">
-                    </div>
-                    <div class="form-group">
-                        <label>Nachricht</label>
-                        <textarea placeholder="Ihre Nachricht..."></textarea>
-                    </div>
-                    <button type="submit" class="btn">Senden</button>
-                </form>
-            </div>
-        </div>
-    </section>
-    
-    <footer>
-        <div class="logo">Schneiderei <span>am See</span></div>
-        <p>Â© 2024 Schneiderei am See. Mit Liebe zum Detail.</p>
-    </footer>
 </body>
 </html>
